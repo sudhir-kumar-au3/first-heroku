@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{title}}</title>
+    <link rel = "icon" type = "image/png" href = "https://files.slack.com/files-pri/TKXCYPJET-FMU4SPWMS/organic-food-logo-613ef00a48-seeklogo.com.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="signup.css">
+
+    </head>
+    <body>
+      
+   <div class="container mt-5">
+     <form  action="/signup" onsubmit="return validateForm()"  method="POST">
+                   <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="d-flex justify-content-center ">
+                         
+                            <a href="/signup"     style="border-bottom: 2px solid lightgreen;padding: 10px;"> SignUp </a>
+                        </div>
+                        <br>
+                    <div class="row">
+                        <div class="col-6">
+                     
+                             
+                            <label class="label control-label">First Name</label>
+                            <input type="text" class="form-control" name="user" placeholder="First Name">
+                            <label class="label control-label">E-mail</label>
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                            <p>Please select your gender:
+                              <br/>
+                                <input type="radio" name="gender" value="male"> Male<br>  
+                                <input type="radio" name="gender" value="female"> Female<br>
+                              </p>
+                              
+                              <label class="label control-label">Date of Birth</label>
+                               <input type="date" class="form-control" name="dob">
+                            
+                          </div>
+                         
+                        <div class="col-6">
+                        
+                            <label class="label control-label">Last Name</label>
+                            <input type="text" class="form-control" name="user" placeholder="Last Name">
+                            <label class="label control-label">Password</label>
+                            <input type="password" class="form-control" name="password" placeholder="Password" maxlength="8">
+                            <label class="label control-label">Current Weight</label>
+                            <input type="number" id="weight" class="form-control" placeholder="Weight(kg)" data-unit-system="kg" name="weight">
+                            <label class="label control-label inline">Current Height</label>
+                            <input type="number" id="height" class="form-control" placeholder="Height(m)" data-unit-system="m" name="height">
+                          
+                        </div>   
+                    </div><br>
+                   <div class="d-flex justify-content-center"><button type="submit" class="btn btns ">Register</button></div> 
+                    </div>
+                    <div  class="col-2"></div>
+                  </div>
+                  </form>
+                    </div>
+                    <script
+                    src="https://code.jquery.com/jquery-3.4.1.min.js"
+                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                    crossorigin="anonymous"></script>
+                    <script src="signup.js"></script>
+                  
+            </body>
+</html>

@@ -1,0 +1,67 @@
+.body{
+    background-image: url(https://cdn.hipwallpaper.com/i/6/60/J0HGDL.jpg);
+    background-repeat:  no-repeat;
+    background-size:  cover;
+}
+.cal{
+    padding: 20px
+}
+.btns{
+    background-color:  rgb(152, 21, 55);
+    border-radius: 20px;
+
+}
+#macros{
+    background-color:  rgb(135, 156, 42);
+    border-radius: 20px;
+    color: rgb(152, 21, 55);
+
+}
+#macros:hover{
+    text-shadow: 2px 2px 5px white;
+    box-shadow: 2px 2px 5px rgb(152, 21, 55);
+}
+
+.btns:hover{
+    box-shadow: 0 4px 8px 0 rgba(152, 21, 55, 0.5), 0 6px 20px 0 rgba(152, 21, 55, 0.19);
+
+}
+.userName{
+    margin-left: 10px;
+    padding: 10px 20px;
+    color:  rgb(152, 21, 55);
+    font-size: 25px;
+    font-weight:  bolder;
+    text-transform:  capitalize;
+}
+.bmi{
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.profile-pic{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-image: url(https://sytecg.com/wp-content/uploads/2018/07/85622928-default-avatar-profile-icon-grey-photo-placeholder-illustrations-vectors.jpg);
+  background-repeat:  no-repeat;
+    background-size:  cover;
+}
+.card{
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.chart{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.calories{
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+   
+}
+.form-control-sm{    border-radius: 20px;
+}
+.carousel-inner img {
+    width: 100%;
+}
