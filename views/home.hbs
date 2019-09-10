@@ -36,8 +36,8 @@
     <div class="row">
         <div class="col-6  rounded  cal">
             <img class="rounded-circle ml-4 profile-pic" src="https://pickaface.net/gallery/avatar/28944528_180710_0122_8zrjz4.png" width="125px" height="125px">
-            <div class="userName">{{data.user}}</div>
-            <form class="bmi">
+            <div class="userName">{{data.fname}}&nbsp;{{data.lname}}</div>
+          <div  class="bmi"> <form>
              <div class="row font-weight-bold">
                   <div class="col">
                       <label for="weight">Weight in kgs</label>
@@ -54,7 +54,7 @@
              <br>
              <button  id="calculate" class="btn text-light btns" type="button">BMI Value</button>&nbsp;
             <button class="btn text-light btns float-right" type="button" value={{data._id}} id="report" disabled>View Full Report</button>
-            </form> 
+            </form> </div> 
         </div>
     </div>
 </div>

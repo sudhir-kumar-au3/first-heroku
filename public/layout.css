@@ -1,3 +1,6 @@
+*{
+    box-sizing:  border-box;
+}
 header{
     padding: 15px 0 6px;
 
@@ -41,6 +44,13 @@ b{
 }
 p{
     line-height: 1.5rem;
+}
+@media(max-width: 600px){
+    p{
+        font-size: .90rem;
+        line-height: inherit;
+    }
+    
 }
 
 

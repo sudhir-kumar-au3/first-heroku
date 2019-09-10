@@ -72,7 +72,11 @@ app.post('/auth', (req, res) => {
           console.log('logged in')
          }
       else
-      res.redirect("/");
+      res.render("invalidLogin.hbs",{
+        layout: false,
+        title:"Invalid Login"
+      });
+
   });
 });
 
