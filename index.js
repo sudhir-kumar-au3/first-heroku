@@ -95,15 +95,17 @@ app.post('/auth', (req, res) => {
 });
 //posting signup data to database
 app.post("/signup", function(req, res, next) {
-  var pass="";
   bcrypt.genSalt(saltRounds,function(error,salt){
     bcrypt.hash(req.body.password,salt,function(error,hash){
       pass=hash;
       var update=req.body;
       update.password=hash;
-      db.collection("users").insertOne(update);
-      console.log("inserted");
+      db.collection("users").insertOne(update,function(error,result){
+        if(error) throw error;
+      console.log(update);
       res.redirect('/');
+
+      })
     
     })
   })

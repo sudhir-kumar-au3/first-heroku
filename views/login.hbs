@@ -53,7 +53,8 @@
                         <div class="form-group">
                                                         <label class="label control-label text-light">Enter your Password&nbsp;<i class="icon ion-ios-key"></i></label>
 
-                            <input type="password" class="form-control" maxlength="8" id="password" placeholder="Password" name="password" required>
+                            <input type="password" class="form-control"  id="password" placeholder="Password" name="password" required>
+                            <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span><br>
                         </div>
                         <div class="container">
                             <div class="row">
@@ -84,12 +85,32 @@
             </div>
         </div></div>            <br><br>
 </div>
-       <script>function alt(){
+<script
+                    src="https://code.jquery.com/jquery-3.4.1.min.js"
+                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                    crossorigin="anonymous"></script>
+       <script>
+           function alt(){
           var input=document.querySelector(".form-control");
           if(input.value.length==0) alert("Empty input fields");
           else
           console.log("Logged in Successfully");
-        }</script>
+        }
+          $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+     });
+     $(".toggle-password").click(function() {
+
+      $(this).toggleClass("fa-eye fa-eye-slash");
+      var input = $($(this).attr("toggle"));
+      if (input.attr("type") == "password") {
+        input.attr("type", "text");
+      } else {
+        input.attr("type", "password");
+      }
+    }); 
+
+        </script>
  
 </body>
 </html>
