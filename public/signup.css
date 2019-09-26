@@ -127,6 +127,7 @@
   left: -35px;
   content: "✖";
 }
+
 @media(max-width: 700px){
   body{
     line-height: inherit;

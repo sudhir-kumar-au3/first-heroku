@@ -95,17 +95,15 @@ app.post('/auth', (req, res) => {
 });
 //posting signup data to database
 app.post("/signup", function(req, res, next) {
+  var pass="";
   bcrypt.genSalt(saltRounds,function(error,salt){
     bcrypt.hash(req.body.password,salt,function(error,hash){
       pass=hash;
       var update=req.body;
       update.password=hash;
-      db.collection("users").insertOne(update,function(error,result){
-        if(error) throw error;
-      console.log(update);
+      db.collection("users").insertOne(update);
+      console.log("inserted");
       res.redirect('/');
-
-      })
     
     })
   })
@@ -281,6 +279,51 @@ app.get('/editProfile',function(req,res){
     }
 else res.redirect('/');
     })
+})
+
+app.get('/foods', function(req,res){
+  res.render("foodDetails.hbs",{layout:false});
+})
+var mealName;
+var foodNo;
+app.post("/foodDetail",function(req,res){
+ 
+  var data=[];
+  foodNo=req.body.foodNo;
+  mealName=req.body.mealName;
+   for(var i=1;i<=req.body.foodNo;i++)
+        {
+          data[i-1]=i;
+        }
+        
+  res.render("foods.hbs",{data:data,layout:false})
+})
+app.post("/calculate",function(req,res){
+  var total=[{calories:0,protien:0,fat:0,carb:0,foodName:mealName}]
+  var foods=req.body.foodName;
+  var quantity=req.body.quantity;
+
+  db.collection("foods").find().toArray(function(err,result){
+    if(err)
+    throw err
+    else{
+      for(var i =0; i<foods.length;i++) {
+        for(var j=0;j<result.length;j++)
+        {
+          if(foods[i]==result[j].foodName)
+          {
+            total[0].calories=Math.floor(total[0].calories+(quantity[i]*result[j].calories));
+            total[0].protien=Math.floor(total[0].protien+(quantity[i]*result[j].protien));
+            total[0].fat=Math.floor(total[0].fat+(quantity[i]*result[j].fat));
+            total[0].carb=Math.floor(total[0].carb+(quantity[i]*result[j].carb));
+          }
+        
+        }
+        console.log(total);
+      }
+      res.render("nutrition.hbs",{data:total,layout:false})
+
+  }})    
 })
 //logout route
 app.get('/logout', (req, res) => {

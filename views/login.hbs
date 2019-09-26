@@ -53,21 +53,21 @@
                         <div class="form-group">
                                                         <label class="label control-label text-light">Enter your Password&nbsp;<i class="icon ion-ios-key"></i></label>
 
-                            <input type="password" class="form-control"  id="password" placeholder="Password" name="password" required>
-                            <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span><br>
+                            <input type="password" class="form-control" maxlength="8" id="password" placeholder="Password" name="password" required>
+                                                    <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-1">
                                     <!--  -->
                                 </div>
-                                <div class="col-sm-5 text-white">
+                                {{!-- <div class="col-sm-5 text-white">
                                     <input type="checkbox" class="form-check-input" id="checkbox">
                                     <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                                 </div>
                                 <div class="col-sm-6">
                                     <a href="#" class="card-link">Forgot password?</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>        
                         <br />
@@ -96,7 +96,7 @@
           else
           console.log("Logged in Successfully");
         }
-          $(function () {
+                  $(function () {
     $('[data-toggle="tooltip"]').tooltip();
      });
      $(".toggle-password").click(function() {
