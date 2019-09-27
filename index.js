@@ -202,7 +202,8 @@ app.get("/home", function(req, res) {
      title:"Calorify.Me!",
      style:'/home.css',
      script:'/home.js',
-     data:user
+     data:user,
+     home:"linkActive"
     })
     console.log(user);
   }
@@ -230,7 +231,8 @@ app.get('/bmiReport',function(req,res){
        title:"BMI Report",
        style:'/home.css',
        script:'/macro.js',
-       data:user
+       data:user,
+       home:"linkActive"
       });
     }
     else if(result.bmiValue<18.5){
@@ -238,7 +240,8 @@ app.get('/bmiReport',function(req,res){
         title:"BMI Report",
         style:'/home.css',
         script:'/macro.js',
-        data:user
+        data:user,
+        home:"linkActive"
        });
     }
     else if(result.bmiValue>=25 && result.bmiValue<=29.9){
@@ -246,7 +249,8 @@ app.get('/bmiReport',function(req,res){
         title:"BMI Report",
         style:'/home.css',
         script:'/macro.js',
-        data:user
+        data:user,
+        home:"linkActive"
        });
     }
     else{
@@ -254,7 +258,8 @@ app.get('/bmiReport',function(req,res){
         title:"BMI Report",
         style:'/home.css',
         script:'/macro.js',
-        data:user
+        data:user,
+        home:"linkActive"
        });
     }
   }
@@ -274,7 +279,8 @@ app.get('/editProfile',function(req,res){
         title:"My Profile",
         style:'/home.css',
         script:'/profile.js',
-        data:user
+        data:user,
+        myProfile:"linkActive"
        })
     }
 else res.redirect('/');
@@ -282,7 +288,10 @@ else res.redirect('/');
 })
 
 app.get('/foods', function(req,res){
-  res.render("foodDetails.hbs",{layout:false});
+  res.render("foodDetails.hbs",{
+    layout:false,
+    food:"linkActive"
+  });
 })
 var mealName;
 var foodNo;
@@ -296,7 +305,7 @@ app.post("/foodDetail",function(req,res){
           data[i-1]=i;
         }
         
-  res.render("foods.hbs",{data:data,layout:false})
+  res.render("foods.hbs",{data:data,layout:false,food:"linkActive"})
 })
 app.post("/calculate",function(req,res){
   var total=[{calories:0,protien:0,fat:0,carb:0,foodName:mealName}]
@@ -321,7 +330,7 @@ app.post("/calculate",function(req,res){
         }
         console.log(total);
       }
-      res.render("nutrition.hbs",{data:total,layout:false})
+      res.render("nutrition.hbs",{data:total,layout:false,food:"linkActive"})
 
   }})    
 })

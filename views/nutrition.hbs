@@ -20,7 +20,7 @@
   <div class="navig">
       <nav class="nav ">
   <a class="nav-link links " href="/home"><i class="icon ion-ios-home"></i> Home</a>
-  <a class="nav-link links " href="/foods"><i class="icon ion-ios-nutrition"></i> Food</a>
+  <a class="nav-link links linkActive" href="/foods"><i class="icon ion-ios-nutrition"></i> Food</a>
   {{!-- <a class="nav-link links" href="/exercise"><i class="icon ion-ios-bicycle"></i> Exercise Chart</a> --}}
   <a class="nav-link links " href="/editProfile"><i class="icon ion-ios-settings"></i> My Profile</a>
   <a class="nav-link links" href="/logout">Logout</a>
@@ -29,8 +29,12 @@
   
 </nav>
 
-
-<div class="container">
+{{!-- <div class="container-fluid">
+<div class="row">
+  
+</div>
+</div> --}}
+<div class="container mb-4">
   <div class="row">
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
@@ -100,9 +104,9 @@
     <button class="btn submitButton">Check another meal</button>
 </form>
     </div>  
-    <div class="col-sm-2"></div>
+    {{!-- <div class="col-sm-2"></div> --}}
   </div></div></div>
-   
+   <br><br><br>
    <footer class="page-footer font-small mdb-color darken-3  foot position-bottom">
        <div class="footer-copyright text-center text-secondary py-3">&copy;2019 Copyright:
     <a href="/home" class="text-warning"> Calorify.Me!</a>

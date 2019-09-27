@@ -115,6 +115,11 @@ p {
   text-shadow: 2px 2px 5px white;
   box-shadow: 2px 2px 5px rgb(152, 21, 55);
 }
+.linkActive{
+  background-color: rgb(152, 21, 55);
+  border-radius: 1.5rem;
+
+}
 
 /* #checkButton
 {

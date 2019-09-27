@@ -74,6 +74,12 @@ body{
     color: rgb(152, 21, 55);
     font-weight: bold;
 }
+.linkActive{
+    background-color: rgb(152, 21, 55);
+    border-radius: 1.5rem;
+
+}
+
 .mealDetails{
     color: rgb(152, 21, 55);
     font-weight: bold;
