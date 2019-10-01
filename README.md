@@ -12,6 +12,6 @@
 * Clone this repo in your local computer
 * Run ```npm install```
 * Select this clone folder
-* Run ```npm run dev```
+* Run ```npm run index.js```
 ### or visit
 [Calorify.Me](https://hbs-calorie.herokuapp.com)
